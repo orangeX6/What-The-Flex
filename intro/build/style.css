@@ -122,8 +122,6 @@ input[type="radio"] {
 }
 input[type="search"] {
   -webkit-appearance: textfield;
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
 input[type="search"]::-webkit-search-cancel-button,
@@ -151,15 +149,13 @@ input::-moz-focus-inner {
 
 /* Box-sizing border-box */
 * {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 /* Some default styles to make each box visible */
 .box {
   color: white;
-  font-size: 50px;
+  font-size: 100px;
   text-align: center;
   text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
   padding: 10px;
@@ -199,19 +195,26 @@ input::-moz-focus-inner {
 
 /* We start writing out flexbox here. The above is just page setup */
 .container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  border: 10px solid yellow;
+  min-height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: column-reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
 }
 
 .box1 {
-  /* flex: 1; */
-  /* flex-basis: 400px;
-  flex-grow: 20;
-  flex-shrink: 10; */
-  flex: 10 5 400px;
+  font-size: 50px;
 }
 
 .box2 {
-  /* flex-basis: 400px;
-  flex-grow: 1; */
-  flex: 1 1 400px;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 360px;
+      -ms-flex: 1 1 360px;
+          flex: 1 1 360px;
 }
