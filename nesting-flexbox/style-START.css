@@ -30,6 +30,7 @@ a {
   background:rgba(0,0,0,0.2);
   padding:20px 5px;
 }
+
 a:hover {
   background:rgba(0,0,0,0.4);
 }
@@ -39,5 +40,37 @@ a:hover {
   list-style: none;
   margin: 0;
   padding: 0; 
+  display: flex;
+  /* align-items: center; */
 }
 
+
+.slider-nav li {
+   flex:3;
+   /* border: 1px solid red; */
+   text-align: center;
+   display: flex;
+   /* align-items: center; */
+  }
+
+
+.slider-nav a{
+  flex-basis: 100%;
+  display:flex;
+   
+}
+
+.slider-nav .arrow{
+   flex:1;
+   
+}
+
+.arrow a{
+  font-size: 30px;
+}
+
+.slider-nav span{
+  display: block;
+  width: 100%;
+  align-self: center;
+}
